@@ -1,0 +1,41 @@
+.form{
+    border-radius: 20px;
+    border: 1px solid;
+    box-shadow: 5px 5px #6A6A6A;
+    position: absolute;
+    margin-top: 10%;
+
+}
+
+.tittle{
+    text-align: center;
+    text-shadow: 2px 2px #6A6A6A;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+
+#username{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#password{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+.button{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.konten{
+    margin-left: 25%;
+    margin-right: 25%;
+}
