@@ -1,0 +1,70 @@
+.form{
+    border-radius: 20px;
+    border: 1px solid;
+    box-shadow: 5px 5px #6A6A6A;
+    position: absolute;
+    margin-top: 10%;
+
+}
+
+.tittle{
+    text-align: center;
+    text-shadow: 2px 2px #6A6A6A;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+#username{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#password{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#idcardNum{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#address{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#gender{
+    width: 150px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#birthday{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
