@@ -1,0 +1,37 @@
+body{
+    background-color: #23521E;
+}
+
+.navimage{
+    width: 170px;
+    margin-right: 100px;
+  
+}
+
+.home{
+    border-right: 1px solid;
+    padding-left: 40px;
+}
+
+.navbar{
+    background: none;
+}
+
+a{
+    color: white !important;
+}
+
+.ml-auto{
+    margin-right: 10%;
+    left: 100px;
+    right: 50px;
+}
+
+.nav-link {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.batas{
+    border-right: 0.5px solid;
+}

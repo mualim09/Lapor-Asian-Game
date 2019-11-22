@@ -1,0 +1,76 @@
+/* body{
+    background-color: #23521E;
+    opacity: 0.5;
+} */
+
+.form{
+    border-radius: 20px;
+    border: 1px solid;
+    position: absolute;
+    margin-top: 10%;
+    height: 400px;
+
+}
+
+.container{
+    background-color: white;
+}
+
+.box1{
+    background-color: white;
+}
+
+.tittle{
+    text-align: center;
+    text-shadow: 2px 2px #6A6A6A;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+#name{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#idatlet{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#phone{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#gender{
+    width: 150px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#birthday{
+    width: 300px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
