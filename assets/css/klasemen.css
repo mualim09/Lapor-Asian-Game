@@ -1,0 +1,26 @@
+body{
+    background-image: url("https://wallpaperstock.net/green-grass-background-wallpapers_35060_1024x768.jpg");
+}
+
+.tittle{
+    text-align: center;
+    text-shadow: 2px 2px #6A6A6A;
+    padding-top: 15px;
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+
+.form{
+    border-radius: 20px;
+    border: 1px solid;
+    position: absolute;
+    margin-top: 10%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 5px 15px grey;
+
+}
+
+img{
+    width: 30px;
+}

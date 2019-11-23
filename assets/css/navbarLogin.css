@@ -21,8 +21,12 @@ a{
     color: white !important;
 }
 
+.batas{
+    border-right: 0.5px solid;
+}
+
 .ml-auto{
-    margin-right: 10%;
+    /* margin-right: 10%; */
     left: 100px;
     right: 50px;
 }
@@ -30,8 +34,4 @@ a{
 .nav-link {
     padding-left: 20px !important;
     padding-right: 20px !important;
-}
-
-.batas{
-    border-right: 0.5px solid;
 }
