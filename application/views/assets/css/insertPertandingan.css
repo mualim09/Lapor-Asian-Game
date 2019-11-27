@@ -45,7 +45,7 @@ body{
     color: white;
 }
 
-#lokasi{
+#idpertandingan{
     width: 50%;
     height: 40px;
     background: #787878;
@@ -53,15 +53,24 @@ body{
     color: white;
 }
 
-.lokasi{
+#jadwal{
+    width: 50%;
+    height: 40px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+
+.id{
     margin-left: 26%;
 }
 
-.uname{
+.fase{
     margin-left: 26%;
 }
 
-.status{
+.jadwal{
     margin-left: 26%;
 }
 
