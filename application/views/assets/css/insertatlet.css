@@ -38,35 +38,40 @@ body{
   }
 
 #name{
-    width: 300px;
+    width: 50%;
+    height: 40px;
     background: #787878;
     border-radius: 10px;
     color: white;
 }
 
 #idatlet{
-    width: 300px;
+    width: 50%;
+    height: 40px;
     background: #787878;
     border-radius: 10px;
     color: white;
 }
 
 #phone{
-    width: 300px;
+    width: 50%;
+    height: 40px;
     background: #787878;
     border-radius: 10px;
     color: white;
 }
 
 #gender{
-    width: 150px;
+    width: 50%;
+    height: 40px;
     background: #787878;
     border-radius: 10px;
     color: white;
 }
 
 #birthday{
-    width: 300px;
+    width: 50%;
+    height: 40px;
     background: #787878;
     border-radius: 10px;
     color: white;

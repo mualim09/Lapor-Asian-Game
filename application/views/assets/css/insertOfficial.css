@@ -1,0 +1,83 @@
+body{
+    background-image: url("https://wallpaperstock.net/green-grass-background-wallpapers_35060_1024x768.jpg");
+}
+
+.form{
+    border-radius: 20px;
+    border: 1px solid;
+    position: absolute;
+    margin-top: 10%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 5px 15px grey;
+
+}
+
+.container{
+    background-color: white;
+}
+
+.tittle{
+    text-align: center;
+    text-shadow: 2px 2px #6A6A6A;
+    padding-top: 15px;
+    margin-bottom: 50px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: white;
+  }
+
+#name{
+    width: 50%;
+    height: 40px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#idofficial{
+    width: 50%;
+    height: 40px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#phone{
+    width: 50%;
+    height: 40px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#gender{
+    width: 50%;
+    height: 40px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+#birthday{
+    width: 50%;
+    height: 40px;
+    background: #787878;
+    border-radius: 10px;
+    color: white;
+}
+
+.btn{
+    margin-top: 40px;
+    width: 100px;
+}
