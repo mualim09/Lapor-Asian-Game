@@ -1,0 +1,84 @@
+body{
+    background-image: url("https://wallpaperstock.net/green-grass-background-wallpapers_35060_1024x768.jpg");
+}
+
+.navimage{
+    width: 170px;
+    margin-right: 100px;
+  
+}
+
+.home{
+    border-right: 1px solid;
+    padding-left: 40px;
+}
+
+.navbar{
+    background: rgba(13, 24, 7, 0.6);
+}
+
+a{
+    color: white !important;
+}
+
+.ml-auto{
+    margin-right: 10%;
+    left: 100px;
+    right: 50px;
+}
+
+.nav-link {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+.batas{
+    border-right: 0.5px solid;
+}
+
+.logo{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/* css view */
+
+body{
+    background-image: url("https://wallpaperstock.net/green-grass-background-wallpapers_35060_1024x768.jpg");
+}
+
+.tittle{
+    text-align: center;
+    text-shadow: 2px 2px #6A6A6A;
+    padding-top: 15px;
+    margin-bottom: 50px;
+    text-decoration: underline;
+}
+
+.form{
+    border-radius: 20px;
+    border: 1px solid;
+    position: absolute;
+    margin-top: 5%;
+    height: 400px;
+    background-color: white;
+    box-shadow: 5px 15px grey;
+
+}
+
+#pertandingan{
+    margin-bottom: 30%;
+}
+
+img{
+    width: 30px;
+}
+
+.kontent{
+    display: none;
+}
+
