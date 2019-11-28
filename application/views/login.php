@@ -19,18 +19,22 @@
             <div class="col-md-8 form">
                 <h2 class="tittle">LOG IN</h2>
                     <div class="konten">
-                        <div class="uname">
-                            <p>Username</p>
-                            <input type="text" name="" id="username" placeholder="username">
-                        </div>
-                        <div class="pass">
-                            <p>Password</p>
-                            <input type="password" name="" id="password" placeholder="password">
-                        </div>
-                        <a href="">Forget Password</a>
-                        <div class="button">
-                            <button type="button" class="btn btn-primary" style="background-color: #00C853;">Login</button>
-                        </div>
+                        <form method="post" action="<?php echo base_url(); ?>AsianGames/login">
+                            <div class="uname">
+                                <p>Username</p>
+                                <?php echo form_error('username', '<small><font color="red">', '</font></small>'); ?>
+                                <input type="text" name="" id="username"value="<?php echo set_value('username') ?>" placeholder="username" required>
+                            </div>
+                            <div class="pass">
+                                <p>Password</p>
+                                <?php echo form_error('password', '<small><font color="red">', '</font></small>'); ?>
+                                <input type="password" name="" id="password" placeholder="password" required> 
+                            </div>
+                            <a href="">Forget Password</a>
+                            <div class="button">
+                                <button type="submit"class="btn btn-primary" style="background-color: #00C853;">Login</button>
+                            </div>
+                        </form>
                     </div>      
             </div>
             <div class="col-md-2"></div>
