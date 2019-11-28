@@ -29,44 +29,52 @@ class AsianGames extends CI_Controller
 	}
 	public function index()
 	{
-		$this->load->view('login');
+		$this->load->view('homepage');
     }
 
     public function viewcabor()
 	{
 		$this->load->view('viewCabor');
-    }
-    
-    public function login()
-	{
-		$this->form_validation->set_rules('username', 'Username', 'required|trim');
-		$this->form_validation->set_rules('password', 'Password', 'required|trim');
-		if ($this->form_validation->run() == false) {
-			$this->load->view('login');
-		} else {
-			$this->process_login();
-		}
 	}
 
-	public function process_login()
+	public function addAtlet()
 	{
-		$username = $this->input->post('username');
-		$password = $this->input->post('password');
-		$login = $this->db->get_where('user', ['username' => $username])->row_array();
-		if ($login) {
-			if (password_verify($password, $login['password'])) {
-				$data = [
-					'username' => $login['username'],
-				];
-				$this->session->set_userdata($data);
-				redirect('AsianGames/viewcabor');
-			} else {
-				$this->session->set_flashdata('message', 'Gagal login: Cek password! ');
-				redirect('AsianGames/login');
-			}
-		} else {
-			$this->session->set_flashdata('message', 'Gagal login: Cek username! ');
-			redirect('AsianGames/login');
-		}
-    }
+		
+		$this->load->view('insertAtlet');
+	}
+	
+    
+    public function login()
+	{	echo "lalalalalalaa";	
+	}
+	// 	$this->form_validation->set_rules('username', 'Username', 'required|trim');
+	// 	$this->form_validation->set_rules('password', 'Password', 'required|trim');
+	// 	if ($this->form_validation->run() == false) {
+	// 		$this->load->view('login');
+	// 	} else {
+	// 		$this->process_login();
+	// 	}
+	// }
+
+	// public function process_login()
+	// {
+	// 	$username = $this->input->post('username');
+	// 	$password = $this->input->post('password');
+	// 	$login = $this->db->get_where('user', ['username' => $username])->row_array();
+	// 	if ($login) {
+	// 		if (password_verify($password, $login['password'])) {
+	// 			$data = [
+	// 				'username' => $login['username'],
+	// 			];
+	// 			$this->session->set_userdata($data);
+	// 			redirect('AsianGames/viewcabor');
+	// 		} else {
+	// 			$this->session->set_flashdata('message', 'Gagal login: Cek password! ');
+	// 			redirect('AsianGames/login');
+	// 		}
+	// 	} else {
+	// 		$this->session->set_flashdata('message', 'Gagal login: Cek username! ');
+	// 		redirect('AsianGames/login');
+	// 	}
+    // }
 }
