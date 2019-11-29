@@ -151,15 +151,15 @@ class AsianGames extends CI_Controller
 		} else {
 			$data = [
 				'id_pertandingan' => $this->input->post('idpertandingan', true),
-				'jadwal' => $this->input->post('jadwal'),
+				'jadwal' => $this->input->post('jadwal', true),
 				'fase' => $this->input->post('fase', true),
 			];
-			$table = 'cabor';
+			$table = 'pertandingan';
 			$register = $this->M_AsianGames->Minsert($table, $data);
 			if ($register) {
 				$this->session->set_flashdata('alert', 'registrasi_berhasil');
 				redirect('AsianGames/index');
 			}
 		}
-	}
+	}	
 }
