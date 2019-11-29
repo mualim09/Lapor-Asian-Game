@@ -23,12 +23,12 @@
                             <div class="uname">
                                 <p>Username</p>
                                 <?php echo form_error('username', '<small><font color="red">', '</font></small>'); ?>
-                                <input type="text" name="" id="username"value="<?php echo set_value('username') ?>" placeholder="username" required>
+                                <input type="text" name="username" id="username"value="<?php echo set_value('username') ?>" placeholder="username" required>
                             </div>
                             <div class="pass">
                                 <p>Password</p>
                                 <?php echo form_error('password', '<small><font color="red">', '</font></small>'); ?>
-                                <input type="password" name="" id="password" placeholder="password" required> 
+                                <input type="password" name="password" id="password" placeholder="password" required> 
                             </div>
                             <a href="">Forget Password</a>
                             <div class="button">

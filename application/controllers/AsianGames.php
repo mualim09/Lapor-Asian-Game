@@ -23,7 +23,7 @@ class AsianGames extends CI_Controller
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->load->model('M_AsianGames');
 		$this->load->helper('url');
 		$this->load->library('session');
 		$this->load->library('form_validation');
@@ -31,7 +31,35 @@ class AsianGames extends CI_Controller
 
     public function index(){
         $this->load->view('homepage');
-    }
+	}
+	
+	public function registrasi()
+	{
+		$this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[user.username]');
+		$this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[6]');
+		$this->form_validation->set_rules('idcardNum', 'IDCardNum', 'required|trim|is_unique[user.username]');
+		$this->form_validation->set_rules('address', 'Address', 'required|trim');
+		$this->form_validation->set_rules('gender', 'Gender', 'required|trim');
+		$this->form_validation->set_rules('birthday', 'Birthday', 'required|trim');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('signup');
+		} else {
+			$data = [
+				'username' => $this->input->post('username', true),
+				'password' => $this->input->post('password'),
+				'id_card_number' => $this->input->post('idcardNum', true),
+				'address' => $this->input->post('address', true),
+				'gender' => $this->input->post('gender', true),
+				'birth_day' => $this->input->post('birthday', true),
+			];
+			$table = 'user';
+			$register = $this->M_AsianGames->Minsert($table, $data);
+			if ($register ) {
+				$this->session->set_flashdata('alert', 'registrasi_berhasil');
+				redirect('AsianGames/index');
+			}
+		}
+	}
     
     public function login()
 	{	
@@ -50,12 +78,13 @@ class AsianGames extends CI_Controller
 		$password = $this->input->post('password');
 		$login = $this->db->get_where('user', ['username' => $username])->row_array();
 		if ($login) {
-			if (password_verify($password, $login['password'])) {
+			echo "lalalalal";
+			if ($password == $login['password']) {
 				$data = [
 					'username' => $login['username'],
 				];
 				$this->session->set_userdata($data);
-				redirect('AsianGames/viewcabor');
+				redirect('AsianGames/addCabor');
 			} else {
 				$this->session->set_flashdata('message', 'Gagal login: Cek password! ');
 				redirect('AsianGames/login');
@@ -66,7 +95,25 @@ class AsianGames extends CI_Controller
 		}
     }
     
-    public function addAtlet(){
-        $this->load->view('insertAtlet');
+    public function addCabor(){
+		$this->form_validation->set_rules('idcabor', 'IDCabor', 'required|trim|is_unique[cabor.code_cabor]');
+		$this->form_validation->set_rules('name', 'Nama', 'required|trim');
+		$this->form_validation->set_rules('jenis', 'Jenis', 'required|trim');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('insertCabor');
+		} else {
+			echo "asdasdasd";
+			$data = [
+				'code_cabor' => $this->input->post('idcabor', true),
+				'nama' => $this->input->post('name'),
+				'jenis' => $this->input->post('jenis', true),
+			];
+			$table = 'cabor';
+			$register = $this->M_AsianGames->Minsert($table, $data);
+			if ($register) {
+				$this->session->set_flashdata('alert', 'registrasi_berhasil');
+				redirect('AsianGames/index');
+			}
+		}
     }
 }

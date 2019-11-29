@@ -47,7 +47,7 @@
             <a class="nav-link batas" href="<?php echo base_url('AsianGames/login'); ?>">LOGIN</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">SIGN UP</a>
+            <a class="nav-link" href="<?php echo base_url('AsianGames/registrasi');?>">SIGN UP</a>
           </li>
         </ul>
       </div>
