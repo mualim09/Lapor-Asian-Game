@@ -141,4 +141,25 @@ class AsianGames extends CI_Controller
 			}
 		}
 	}
+
+	public function addPertandingan(){
+		$this->form_validation->set_rules('idpertandingan', 'IDpertandingan', 'required|trim|is_unique[pertandingan.id_pertandingan]');
+		$this->form_validation->set_rules('fase', 'Fase', 'required|trim');
+		$this->form_validation->set_rules('jadwal', 'Jadwal', 'required|trim');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('insertPertandingan');
+		} else {
+			$data = [
+				'id_pertandingan' => $this->input->post('idpertandingan', true),
+				'jadwal' => $this->input->post('jadwal'),
+				'fase' => $this->input->post('fase', true),
+			];
+			$table = 'cabor';
+			$register = $this->M_AsianGames->Minsert($table, $data);
+			if ($register) {
+				$this->session->set_flashdata('alert', 'registrasi_berhasil');
+				redirect('AsianGames/index');
+			}
+		}
+	}
 }
