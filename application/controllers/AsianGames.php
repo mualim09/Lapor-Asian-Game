@@ -102,7 +102,6 @@ class AsianGames extends CI_Controller
 		if ($this->form_validation->run() == false) {
 			$this->load->view('insertCabor');
 		} else {
-			echo "asdasdasd";
 			$data = [
 				'code_cabor' => $this->input->post('idcabor', true),
 				'nama' => $this->input->post('name'),
@@ -115,5 +114,31 @@ class AsianGames extends CI_Controller
 				redirect('AsianGames/index');
 			}
 		}
-    }
+	}
+	
+	public function addNegara(){
+		$this->form_validation->set_rules('nama', 'Nama', 'required|trim|is_unique[negara.nama_negara]');
+		$this->form_validation->set_rules('total', 'Total', 'required|trim');
+		$this->form_validation->set_rules('emas', 'Emas', 'required|trim');
+		$this->form_validation->set_rules('perak', 'Perak', 'required|trim');
+		$this->form_validation->set_rules('perunggu', 'Perunggu', 'required|trim');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('insertNegara');
+		} else {
+			echo "asdasdasd";
+			$data = [
+				'nama_negara' => $this->input->post('nama', true),
+				'emas' => $this->input->post('emas', true),
+				'perak' => $this->input->post('perak', true),
+				'perunggu' => $this->input->post('perunggu', true),
+				'total' => $this->input->post('total', true),
+			];
+			$table = 'negara';
+			$register = $this->M_AsianGames->Minsert($table, $data);
+			if ($register) {
+				$this->session->set_flashdata('alert', 'registrasi_berhasil');
+				redirect('AsianGames/index');
+			}
+		}
+	}
 }
