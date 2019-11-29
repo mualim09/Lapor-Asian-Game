@@ -111,9 +111,15 @@ class AsianGames extends CI_Controller
 			$register = $this->M_AsianGames->Minsert($table, $data);
 			if ($register) {
 				$this->session->set_flashdata('alert', 'registrasi_berhasil');
-				redirect('AsianGames/index');
+				redirect('AsianGames/viewCabor');
 			}
 		}
+	}
+
+	public function viewCabor(){
+		$table = 'cabor';
+		$data['cabor']['entries'] = $this->M_AsianGames->get_data($table);
+		$this->load->view('viewCabor',$data);
 	}
 	
 	public function addNegara(){
@@ -161,5 +167,5 @@ class AsianGames extends CI_Controller
 				redirect('AsianGames/index');
 			}
 		}
-	}	
+	}
 }
