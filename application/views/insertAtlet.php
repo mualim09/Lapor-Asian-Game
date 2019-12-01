@@ -24,25 +24,40 @@
                                 <div class="col-md-6">
                                     <div class="id">
                                         <p>ID Athlete</p>
+                                        <?php echo form_error('idatlet', '<small><font color="red">', '</font></small>'); ?>
                                         <input type="text" name="idatlet" id="idatlet" placeholder="ID Athlete">
                                     </div>
                                     <div class="uname">
                                         <p>Name</p>
+                                        <?php echo form_error('name', '<small><font color="red">', '</font></small>'); ?>
                                         <input type="text" name="name" id="name" placeholder="Athlete name">
                                     </div>
-                                    <div class="phone">
-                                        <p>Nations</p>
-                                        <input type="text" name="phone" id="phone" placeholder="+62xxxxxxx">
+                                    <div class="name">
+                                        <p>Negara</p>
+                                        <?php echo form_error('nama', '<small><font color="red">', '</font></small>'); ?>
+                                        <input type="text" name="negara" id="name" placeholder="Nations name" required>
+                                    </div>
+                                    <div class="id">
+                                        <p>ID Cabang Olahraga</p>
+                                        <?php echo form_error('idcabor', '<small><font color="red">', '</font></small>'); ?>
+                                        <input type="text" name="idcabor" id="idcabor" placeholder="ID Cabang Olahraga"required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
+                                    <div class="phone">
+                                        <p>Nations</p>
+                                        <?php echo form_error('phone', '<small><font color="red">', '</font></small>'); ?>
+                                        <input type="text" name="phone" id="phone" placeholder="+62xxxxxxx">
+                                    </div>
                                     <div class="gen">
                                         <p>Gender</p>
-                                        <input type="text" name="" id="gender" placeholder="Male">
+                                        <?php echo form_error('gender', '<small><font color="red">', '</font></small>'); ?>
+                                        <input type="text" name="gender" id="gender" placeholder="Male">
                                     </div>
                                     <div class="birth">
                                         <p>Birth Day</p>
-                                        <input type="text" name="" id="birthday" placeholder="01/01/1999">
+                                        <?php echo form_error('birthday', '<small><font color="red">', '</font></small>'); ?>
+                                        <input type="text" name="birthday" id="birthday" placeholder="01/01/1999">
                                     </div>
                                     <button type="submit" class="btn btn-success">ADD</button>
                                 </div>

@@ -143,9 +143,15 @@ class AsianGames extends CI_Controller
 			$register = $this->M_AsianGames->Minsert($table, $data);
 			if ($register) {
 				$this->session->set_flashdata('alert', 'registrasi_berhasil');
-				redirect('AsianGames/index');
+				redirect('AsianGames/viewnegara');
 			}
 		}
+	}
+
+	public function viewnegara(){
+		$table = 'negara';
+		$data['negara']['entries'] = $this->M_AsianGames->get_data($table);
+		$this->load->view('klasemen',$data);
 	}
 
 	public function addPertandingan(){
@@ -164,8 +170,41 @@ class AsianGames extends CI_Controller
 			$register = $this->M_AsianGames->Minsert($table, $data);
 			if ($register) {
 				$this->session->set_flashdata('alert', 'registrasi_berhasil');
-				redirect('AsianGames/index');
+				redirect('AsianGames/viewPertandingan');
 			}
 		}
+	}
+
+	public function viewPertandingan(){
+		$table = 'pertandingan';
+		$data['pertandingan']['entries'] = $this->M_AsianGames->get_data($table);
+		$this->load->view('viewPertandingan',$data);
+	}
+
+	public function addAtlet(){
+		$this->form_validation->set_rules('idpertandingan', 'IDpertandingan', 'required|trim|is_unique[pertandingan.id_pertandingan]');
+		$this->form_validation->set_rules('fase', 'Fase', 'required|trim');
+		$this->form_validation->set_rules('jadwal', 'Jadwal', 'required|trim');
+		if ($this->form_validation->run() == false) {
+			$this->load->view('insertPertandingan');
+		} else {
+			$data = [
+				'id_pertandingan' => $this->input->post('idpertandingan', true),
+				'jadwal' => $this->input->post('jadwal', true),
+				'fase' => $this->input->post('fase', true),
+			];
+			$table = 'pertandingan';
+			$register = $this->M_AsianGames->Minsert($table, $data);
+			if ($register) {
+				$this->session->set_flashdata('alert', 'registrasi_berhasil');
+				redirect('AsianGames/viewPertandingan');
+			}
+		}
+	}
+
+	public function viewAtlet(){
+		$table = 'pertandingan';
+		$data['pertandingan']['entries'] = $this->M_AsianGames->get_data($table);
+		$this->load->view('viewPertandingan',$data);
 	}
 }

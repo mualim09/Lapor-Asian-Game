@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2019 at 04:53 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Dec 01, 2019 at 10:58 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `asian games`
+-- Database: `asian_games`
 --
 
 -- --------------------------------------------------------
@@ -49,6 +49,16 @@ CREATE TABLE `cabor` (
   `jenis` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `cabor`
+--
+
+INSERT INTO `cabor` (`code_cabor`, `nama`, `jenis`) VALUES
+('asd', 'asd', 'asd'),
+('BASKET234', 'Basket Ball', 'Group'),
+('BASKET444', 'Basket Ball', 'Group'),
+('SWN212', 'Renang', 'Single');
+
 -- --------------------------------------------------------
 
 --
@@ -76,6 +86,14 @@ CREATE TABLE `negara` (
   `perak` int(11) NOT NULL,
   `total` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `negara`
+--
+
+INSERT INTO `negara` (`nama_negara`, `emas`, `perunggu`, `perak`, `total`) VALUES
+('Indonesia', 15, 5, 10, 30),
+('Nigeria', 5, 5, 5, 30);
 
 -- --------------------------------------------------------
 
@@ -114,6 +132,14 @@ CREATE TABLE `pertandingan` (
   `fase` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `pertandingan`
+--
+
+INSERT INTO `pertandingan` (`id_pertandingan`, `jadwal`, `fase`) VALUES
+('1239485', '2018-01-01', 'kaskadskj'),
+('SOC2222', '2018-08-10', 'Penyisihan');
+
 -- --------------------------------------------------------
 
 --
@@ -126,6 +152,29 @@ CREATE TABLE `tempat` (
   `lokasi` varchar(50) NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `username` varchar(20) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `id_card_number` varchar(20) NOT NULL,
+  `address` varchar(50) NOT NULL,
+  `gender` varchar(20) NOT NULL,
+  `birth_day` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`username`, `password`, `id_card_number`, `address`, `gender`, `birth_day`) VALUES
+('asdasd', 'asdasd', 'asdasdasd', 'asdasd', 'asd', '1999-07-01'),
+('aaaaaaa', 'aaaaaaa', 'asdsadsa', 'asdsadasd', 'asdsada', '1998-02-01');
 
 --
 -- Indexes for dumped tables
