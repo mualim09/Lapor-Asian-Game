@@ -10,4 +10,5 @@ aplikasi ini dirancang untuk membantu penyelenggara asian games serta untuk tuga
 
 # Running Program
 1. Pindahkan seluruh file ini kedalam folder XAMPP/htdocs
-2. Nyalakan XAMPP anda, dan silahkan cek port authentication pada folder
+2. Ekstrak Database ke MySQL
+3. Nyalakan XAMPP anda, dan silahkan running pada 'http://localhost/AsianGames/
